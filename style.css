@@ -1,8 +1,58 @@
-h1 {text-align: center;}
-p {text-align: center;}
-div {text-align: center;}
-button {display: block; margin: 0 auto;}
-h1 {color: orange;}
-button {background-color: red;}
-button {height: 50px; width: 100px;}
+/* Global styles */
+body {
+  font-family: Arial, sans-serif;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
 
+/* Text alignment */
+h1,
+p,
+div {
+  text-align: center;
+}
+
+/* Heading styles */
+h1 {
+  color: orange;
+  margin-bottom: 30px;
+}
+
+/* Button styles */
+button {
+  display: block;
+  margin: 0 auto 20px;
+  height: 50px;
+  width: 100px;
+  background-color: red;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+button:hover:not(:disabled) {
+  background-color: darkred;
+}
+
+button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* Image styles */
+#appi {
+  display: none; /* Hidden until image is loaded */
+  margin: 0 auto;
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#appi[src] {
+  display: block; /* Show when src attribute exists */
+}
